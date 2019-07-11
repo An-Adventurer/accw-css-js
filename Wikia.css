@@ -1,0 +1,324 @@
+/* For template documentation */
+.template-documentation {
+    clear: both;
+    margin: 1em 0 0 0;
+    border: 1px solid #aaa; 
+    background-color: #ecfcf4; 
+    padding: 5px;
+}
+
+/* Auto-number rows in tables */
+
+table.numbered { counter-reset: row; }
+table.numbered td:first-child:before { counter-increment: row; content: counter(row) ". "; }
+
+/* Make the list of references smaller */
+ol.references {
+    font-size: 100%;
+}
+.references-small { 
+    font-size: 90%;
+}
+
+/* VALIDATOR NOTICE: the following is correct, but the W3C validator doesn't accept it */
+/* -moz-* is a vendor-specific extension (CSS 2.1 4.1.2.1) */
+/* column-count is from the CSS3 module "CSS Multi-column Layout" */
+/* Please ignore any validator errors caused by these two lines */
+.references-2column {
+    font-size: 90%;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
+/* Highlight clicked reference in blue to help navigation */
+ol.references > li:target {
+    background-color: #DEF;
+}
+
+sup.reference:target { 
+    background-color: #DEF;
+}
+
+/* Styling for citations */
+cite {
+    font-style: normal;
+    word-wrap: break-word;
+}
+
+/* If there is an inline link to a full citation, the full citation will turn blue when the inline link is clicked */
+cite:target { 
+    background-color: #DEF;
+}
+
+/* For linked citation numbers and document IDs, where the number need not be shown on a screen or a handheld, but should be included in the printed version */
+
+@media screen, handheld, projection {
+    cite *.printonly {
+        display: none;
+    }
+}
+
+/* Wikitable (Prettytable) class for skinning normal tables */
+table.wikitable,
+table.prettytable {
+  margin: 1em 1em 1em 0;
+  background: #f9f9f9;
+  border: 1px #aaaaaa solid;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+table.wikitable th, table.wikitable td,
+table.prettytable th, table.prettytable td {
+  border: 1px #aaaaaa solid;
+  padding: 0.2em 0.4em;
+}
+table.wikitable th, table.wikitable td.hl3, table.wikitable th.hl3,
+table.prettytable th, table.prettytable td.hl3, table.wikitable th.hl3 {
+  background: #d6e0f5;
+  text-align: center;
+}
+table.wikitable td.hl1, table.wikitable th.hl1,
+table.prettytable td.hl1, table.wikitable th.hl1 {
+  background: #c5d8fc;
+  text-align: center;
+}
+table.wikitable td.hl2, table.wikitable th.hl2,
+table.prettytable td.hl2, table.wikitable th.hl2 {
+  background: #a7c1f2;
+  text-align: center;
+}
+table.wikitable caption,
+table.prettytable caption {
+  margin-left: inherit;
+  margin-right: inherit;
+  font-weight: bold;
+}
+ 
+/* 'show'/'hide' buttons created dynamically by the CollapsibleTables javascript
+   in [[MediaWiki:Common.js]] are styled here so they can be customised. */
+.collapseButton {
+    /* @noflip */
+    float: right;
+    font-weight: normal;
+    /* @noflip */
+    margin-left: 0.5em;
+    /* @noflip */
+    text-align: right;
+    width: auto;
+}
+
+/* Homepage styling */
+#mainpage_container {
+    width:100%;
+    margin:1em 0 0;
+    padding:2px;
+}
+
+.mainpage_box {
+    width:33%;
+    padding:5 0em;
+    background:#ffffff;
+    vertical-align:top;
+}
+
+.mainpage_boxheader {
+    border:1px solid #a3b0bf;
+    border-radius:25px;
+    padding:5px;
+    margin:3px;
+    text-align: center;
+}
+
+.mainpage_boxheader div {
+    float:right;
+}
+
+.mainpage_boxcontents {
+    padding:0 2em;
+}
+
+/* Item and Equipment Templates */
+.item {
+   float:left;
+   width:300px;
+   border: 1px solid #907854;
+   background-color: #000000;
+   color: #FFFFFF;
+   opacity: 0.9;
+   margin-top:7px;
+   padding: 0.2em;
+}
+
+.item p {
+   border-bottom:1px solid #907854;
+   text-align:center;
+}
+
+#itemheader {
+   border-bottom:1px solid #907854;
+   text-align:center;
+   line-height: 32px;
+   height:36px;
+}
+
+/* Creature and NPC Templates */
+.character {
+   width:308px;
+   height:412px;
+   border: 1px solid #907854;
+   background-color: #1A1A1A;
+   color: #FFFFFF;
+   padding:5px;
+}
+
+table.character-infobox {
+    background:#f9f9f9;
+    border:1px solid #e5e5e5;
+    padding:5px;
+    width:300px;
+    float:right;
+}
+
+table.character-infobox th {
+    border:1px solid #a3b0bf;
+    text-align:center;
+    padding:5px;
+}
+
+/* Dungeon Summary Template */
+
+table.dungeon-infobox {
+    background:#f9f9f9;
+    border:1px solid #e5e5e5;
+    padding:5px;
+    width:300px;
+    float:right;
+}
+
+table.dungeon-infobox th {
+    border:1px solid #a3b0bf;
+    text-align:center;
+    padding:5px;
+}
+
+table.dungeon-infobox td.subheader {
+    font-weight:bold;
+    line-height:25px;
+}
+
+/* Quest Summary Template */
+
+table.quest-infobox {
+    background:#f9f9f9;
+    border:1px solid #e5e5e5;
+    padding:5px;
+    width:250px;
+    float:right;
+}
+
+table.quest-infobox th {
+    border:1px solid #a3b0bf;
+    padding:5px;
+    text-align:center;
+}
+
+table.rowcolors tr.even {background-color: #FFFFFF;}
+table.rowcolors tr.odd {background-color: #F0F0F0;}
+
+/* Templates Additional */
+
+.contentsbar {
+    background:#f9f9f9;
+    border:1px solid #aaaaaa;
+    padding:5px;
+    width:100%;
+    text-align:center;
+}
+
+.twocolumn { 
+    margin:0;
+    padding:0;
+    line-height:25px;
+}
+    
+.twocolumn p {
+    vertical-align:top;
+    display: inline-block;
+    width:49%;
+    margin:0;
+    padding:0;
+}
+
+/* Tooltips */
+.htt .tooltip-content .tooltip-hide, .hidden { display:none; }
+
+.tooltip-error {
+   background-color: black;
+   color: white;
+   max-width: 18em;
+}
+
+.tooltip-ready {
+  visibility:hidden;
+  display:block;
+  z-index:999;
+}
+
+.creaturetooltip {
+   background-color: #f9f9f9;
+}
+
+/* Chat colors */
+span.say {
+color:black;
+}
+
+span.emote {
+color:grey;
+}
+
+span.tell {
+color:darkgoldenrod;
+}
+
+span.event {
+color:green;
+}
+
+span.magic {
+color:cornflowerblue;
+}
+
+/* Return to section link */
+.returntobar {
+  width:18%;
+  padding: 5px;
+  margin: 3px;
+  border:1px solid #a3b0bf;
+  border-radius:25px;
+  font-size:85%;
+}
+
+.returntobar span {
+  font-weight:bold;
+}
+
+.returntobar div {
+  float: right;
+}
+
+/* Section background colors */
+.accwikibgc {background: #99b6ec}
+.characterbgc {background: #bceca9}
+.gameplaybgc {background: #fffaa6}
+.newsbgc {background: #a79aec}
+.questsbgc {background: #eca9bc}
+.itemsbgc {background: #a9deec}
+.craftingbgc {background: #ecd8a9}
+.worldbgc {background: #ecb7a9}
+.lorebgc {background: #b1897e}
+.gettingstartedbgc {background: #d7a9ec}
+.mediabgc {background: #ffcea6}
+.turbinebgc {background: #deeca9}
+
