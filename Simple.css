@@ -1,0 +1,5 @@
+/* CSS placed here will affect users of the Simple skin */
+ 
+.portlet {
+    overflow: visible !important;
+}
