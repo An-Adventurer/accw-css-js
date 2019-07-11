@@ -1,0 +1,129 @@
+/***** Edit this file to customize the Monobook skin for the entire site.*****/
+/* See also: [[MediaWiki:Common.css]] */
+
+
+/* Allow popup submenus to overflow the sidebar area */
+.portlet {
+	overflow: visible !important;
+}
+
+/*
+* MenuSidebar
+*/
+/* this has to be overridden for every menu */
+#p-Menu,
+#p-Menu2,
+#p-Menu3 {
+ overflow: visible; 
+}
+ 
+/* this has to be overridden for every menu */
+#p-Menu div,
+#p-Menu2 div,
+#p-Menu3 div {
+ margin: 0;
+ padding: 0;
+}
+ 
+/* this is an example to make the list of the second entry bigger e.g. when there is a longer text in a list item
+#p-Menu ul li.item2 ul {
+ width: 16em;
+}
+*/
+ 
+/* this an example to change the background color of every second list item
+li.even {
+ background-color: #eeeeee;
+}
+*/
+ 
+.menuSidebar ul { /* remove bullets and list indents */
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+ 
+/* this div is only for better handling and navigation  ... could also be done in inner ul*/
+.menuSidebar ul div { 
+ position: absolute;
+ top: -6px;
+ left: 100%; /* to position them to the right of their containing block */
+ width: 100%; /* width is based on the containing block */
+ z-index: 100; /* show ul on top */
+}
+ 
+.menuSidebar ul ul { 
+ background-color: white;
+ border: 1px solid #aaaaaa;
+ margin-top: 5px; /* make navigation easier*/
+ margin-bottom: 5px; /* make navigation easier*/
+ z-index: 101; /* show on top; Needed for IE 7 */
+ width: 12em; /* width of inner menu, Needed for IE 7 */
+}
+ 
+.menuSidebar li {
+ position: relative; /* make li a container for inner elements */
+ margin: 1px;
+ z-index: 102; /* show on top; Needed for IE 7 */
+}
+ 
+/* style, color and size links and headings to suit */
+.menuSidebar a {
+ font-weight: normal;
+ display: block;
+ border-width: 0px 0px 0px 0px;
+ border-style: solid;
+ border-color: #aaaaaa;
+ margin: 0px;
+ padding: 1px;
+ padding-left: 5px;
+ color: #0000ff;
+ text-decoration: none;
+}
+ 
+/* move the &gt; to the right */
+.menuSidebar a em {
+ position: absolute;
+ right: 4px;
+}
+ 
+.menuSidebar li:hover, /* Needed for IE 7 */
+.menuSidebar a:hover {
+ background: #ccccff;
+}
+ 
+.menuSidebar li.separator a:hover {
+ background: white;
+}
+ 
+/* Needed for IE 7 */
+.menuSidebar li.separator a,
+.menuSidebar li.separator {
+ line-height: 0px;
+ height: 0px;
+ font-size: 0px;
+}
+ 
+.menuSidebar ul li:last-Child a { 
+ border-width: 0px 0px 0px 0px; // remove the last bottom line 
+ padding-bottom: 0px;
+}
+ 
+/* hides the first level */
+.menuSidebar ul li div { display: none; }
+ 
+/* shows the first level and hide the second */
+.menuSidebar ul li:hover div, 
+.menuSidebar ul li div:hover { display: block; } /* div is again used for easier navigation*/
+.menuSidebar ul li:hover ul li div { display: none; } /* hide the next level */
+ 
+/* second level*/
+.menuSidebar ul li ul li:hover div,
+.menuSidebar ul li ul li div:hover  { display: block; } /* div is again used for easier navigation*/
+.menuSidebar ul li ul li:hover ul li div { display: none; }  /* hide the next level */
+ 
+/* third level */
+.menuSidebar ul li ul li ul li:hover div,
+.menuSidebar ul li ul li ul li div:hover   { display: block; } /* div is again used for easier navigation*/
+.menuSidebar ul li ul li ul li:hover ul li div { display: none; }  /* hide the next level */
+
