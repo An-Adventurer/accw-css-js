@@ -1,0 +1,23 @@
+/* CSS placed here will affect users of the Vector skin */
+
+/* keep nested list fonts from continually decreasing in size with each nesting */
+#mw-panel div.portal div.body ul li {
+	font-size: small !important;
+}
+
+/* Allow popup submenus to overflow the sidebar area */
+#mw-panel div.portal div.body ul li {
+	overflow: visible !important;
+}
+
+
+
+/* minor adjustments to the sidebar area for the Vector skin */
+.menuSidebar ul div { 
+        top: -1px !important; /* vertical offset of submenus */
+}
+
+.menuSidebar ul {
+ width: 8em; /* width of main menu */
+}
+
