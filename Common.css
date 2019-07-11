@@ -1,0 +1,415 @@
+/** CSS placed here will be applied to all skins except the default Wikia skin */
+
+/* For template documentation */
+.template-documentation {
+    clear: both;
+    margin: 1em 0 0 0;
+    border: 1px solid #aaa; 
+    background-color: #ecfcf4; 
+    padding: 5px;
+}
+
+/* Auto-number rows in tables */
+
+table.numbered { counter-reset: row; }
+table.numbered td:first-child:before { counter-increment: row; content: counter(row) ". "; }
+
+/* Make the list of references smaller */
+ol.references {
+    font-size: 100%;
+}
+.references-small { 
+    font-size: 90%;
+}
+
+/* VALIDATOR NOTICE: the following is correct, but the W3C validator doesn't accept it */
+/* -moz-* is a vendor-specific extension (CSS 2.1 4.1.2.1) */
+/* column-count is from the CSS3 module "CSS Multi-column Layout" */
+/* Please ignore any validator errors caused by these two lines */
+.references-2column {
+    font-size: 90%;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
+/* Highlight clicked reference in blue to help navigation */
+ol.references > li:target {
+    background-color: #DEF;
+}
+
+sup.reference:target { 
+    background-color: #DEF;
+}
+
+/* Styling for citations */
+cite {
+    font-style: normal;
+    word-wrap: break-word;
+}
+
+/* If there is an inline link to a full citation, the full citation will turn blue when the inline link is clicked */
+cite:target { 
+    background-color: #DEF;
+}
+
+/* For linked citation numbers and document IDs, where the number need not be shown on a screen or a handheld, but should be included in the printed version */
+
+@media screen, handheld, projection {
+    cite *.printonly {
+        display: none;
+    }
+}
+
+/* 'show'/'hide' buttons created dynamically by the CollapsibleTables javascript
+   in [[MediaWiki:Common.js]] are styled here so they can be customised. */
+.collapseButton {
+    float:right;
+    font-weight:normal;
+    margin-left:0.5em;
+    text-align:right;
+    width:auto;
+}
+
+/* 'collapse'/'expand' buttons created by the mw-collapsible javascript */
+.collapse span.mw-collapsible-toggle {float: left;}
+
+/* Table alignment */
+.columnscenter tr {text-align:center;}
+.columnsright tr {text-align:right;}
+.columntworight td:nth-child(2) {text-align:right;}
+.columnstop td {vertical-align: top;}
+
+/* Homepage styling */
+#mainpage_container {
+    width:100%;
+    margin:1em 0 0;
+    padding:2px;
+}
+
+.mainpage_box {
+    width:33%;
+    padding:5 0em;
+    vertical-align:top;
+}
+
+.mainpage_boxheader {
+    border:1px solid #996633;
+    padding:5px;
+    margin:3px;
+    text-align: center;
+}
+
+.mainpage_boxheader div {
+    float:right;
+}
+
+.mainpage_boxcontents {
+    padding:0 2em;
+}
+
+/* Item and Equipment Templates */
+.item {
+   float:left;
+   width:300px;
+   border:1px solid #907854;
+   background-color: #1a1a1a;
+   color: #FFFFFF;
+   padding: 0.2em;
+   font-size: 0.90em;
+   font-family: Verdana, Arial, sans-serif;
+}
+
+.item span {color:GreenYellow}
+.item a:visited {color:SkyBlue}
+.item a:link, a:hover, a:active {color:RoyalBlue}
+
+.item_textbox {
+   background-color:#e6dd80;
+   border:1px solid #cc9900;
+   color:#000000;
+   padding:30px;
+   width:500px;
+   margin:10px auto 0;
+   text-align:justify;
+}
+
+.item_textbox #author {
+   border-top:1px solid #cc9900;
+   margin:10px 0;
+}
+
+.item ul, .item_textbox ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   list-style-type: none;
+   list-style-image: none;
+}
+
+.item li.topbottomspace {margin:10px 0px;}
+.item li.topspace {margin-top:10px;}
+.item li.bottomspace {margin-bottom:10px;}
+.item li.dmgbonus {padding-left:6px;}
+.item li.inscription {border-top:1px solid #907854;}
+
+#item_header {
+   display:table;
+   padding:2px;
+   text-align:center;
+   width:100%;
+   font-weight:bold;
+}
+
+#item_header div {
+   display:table-cell;
+   vertical-align: middle;
+}
+
+#item_header div + div {
+   display:table-cell;
+   vertical-align: middle;
+   width:40px;
+}
+
+/* Dyed Variations Template */
+.dyedvariations {
+    border: 1px solid white;
+    border-collapse: collapse;
+    background:#404040;
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dyedvariations td {
+    border: 1px solid white;
+    padding:5px;
+}
+
+.dyedvariations th {
+    font-size:large;
+    font-weight: bold;
+    padding:5px;
+}
+
+/* Creature and NPC Templates */
+.character-infobox {
+    background:#000033;
+    border:2px solid #996633;
+    padding:0.3em;
+    width:22em;
+    float:right;
+    font-size:95%;
+    color:#ffffff;
+}
+
+.character-infobox th {
+    padding:0.5em;
+    font-size:120%;
+}
+
+/* Dungeon Summary Template */
+.location-infobox {
+    background:#000033;
+    border:2px solid #996633;
+    padding:0.3em;
+    width:22em;
+    float:right;
+    font-size:95%;
+    color:#ffffff;
+}
+
+.location-infobox th {
+    padding:0.5em;
+    font-size:120%;
+}
+
+/* Quest Summary Template */
+.quest-infobox {
+    background:#000033;
+    border:2px solid #996633;
+    padding:0.3em;
+    width:22em;
+    float:right;
+    font-size:95%;
+    color:#ffffff;
+}
+
+.quest-infobox th {
+    padding:0.5em;
+    text-align:center;
+    font-size:120%;
+}
+
+/* Quest Rewards Template */
+table.questrewards {
+    width:375px;
+    background:#000033;
+    border:2px solid #996633;
+    margin-bottom:3px;
+}
+ 
+table.questrewards th {
+   background:#996633;
+   font: normal 105% Verdana;
+}
+ 
+table.questrewards td:first-child {
+   text-align:center;
+   width:100px;
+   font: normal 95% Verdana;
+   color:#ffffff;
+}
+
+table.questrewards td:last-child {
+   font: normal 100% Arial;
+}
+
+table.questrewards tr {
+   vertical-align:top;
+}
+
+/* Item list templates */
+.itemtable {
+    display:table;
+    margin-left:6px;
+    margin-bottom:10px;
+}
+
+.itemtable_row {
+    display:table-row;
+}
+
+.itemtable_cell {
+    display:table-cell;
+    padding:5px;
+}
+
+.itemtable_caption {
+    font-weight: bold;
+}
+
+.itemlist ul {
+   list-style: none;
+   list-style-type: none;
+   list-style-image: none;
+}
+
+.creatureitems {
+    display:inline-block;
+    padding:3px;
+    margin-bottom:1px;
+}
+
+.creatureitems > span {
+    position: absolute;
+}
+
+.creatureitems > span > span {
+    font-size:29px;
+    z-index:1;
+    position: absolute;
+    right: -32px;
+    bottom: -26px;
+}
+
+/* Horizontal ToC bar (dungeon and quest templates) */
+.contentsbar {
+    background:#000033;
+    padding:5px;
+    width:100%;
+    text-align:center;
+}
+
+/* Map point template */
+.mappoint {
+    position:relative;
+    top:0px;
+    left:0px;
+    width:260px;
+}
+.mappoint span:first-child {
+    position:absolute;
+    top:2px;
+    left:2px;
+    z-index:1;
+}
+
+.mappoint span + span, .mappointloc {
+    z-index:2;
+}
+
+/* Tooltips */
+.htt .tooltip-content .tooltip-hide, .hidden { display:none; }
+
+.tooltip-error {
+   background-color: black;
+   color: white;
+   max-width: 18em;
+}
+
+.tooltip-ready {
+  visibility:hidden;
+  display:block;
+  z-index:999;
+}
+
+.creaturetooltip {
+   background-color: #f9f9f9;
+}
+
+/* Chat colors */
+span.say {
+color:black;
+}
+
+span.emote {
+color:grey;
+}
+
+span.tell {
+color:darkgoldenrod;
+}
+
+span.event {
+color:green;
+}
+
+span.magic {
+color:cornflowerblue;
+}
+
+/* Return to section link */
+.linkbar {
+  width:25%;
+  padding: 5px;
+  margin: 3px;
+  font-size:85%;
+}
+
+.linkbar span {
+  font-weight:bold;
+}
+
+.linkbar div {
+  float: right;
+}
+
+/* Section background colors */
+.accwikibgc {background: #996633}
+.characterbgc {background: #996633}
+.gameplaybgc {background: #996633}
+.newsbgc {background: #996633}
+.questsbgc {background: #996633}
+.itemsbgc {background: #996633}
+.craftingbgc {background: #996633}
+.worldbgc {background: #996633}
+.lorebgc {background: #996633}
+.gettingstartedbgc {background: #996633}
+.mediabgc {background: #996633}
+.turbinebgc {background: #996633}
+
+/* Hide main page title */
+body.page-Home h1.firstHeading {display:none;}
+
